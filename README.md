@@ -1,8 +1,22 @@
 # Zebra Crossing Vehicle Alert System
 
+![Platform](https://img.shields.io/badge/Platform-Arduino%20Uno-teal)
+![Language](https://img.shields.io/badge/Language-Arduino%20C%2B%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 An Arduino prototype that uses an ultrasonic sensor and a NeoPixel LED strip to alert when a vehicle enters a zebra crossing detection zone. Designed to address the common traffic violation of vehicles stopping on pedestrian crossings.
 
----
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [How It Works](#how-it-works)
+- [Hardware & Wiring](#hardware--wiring)
+- [Prerequisites](#prerequisites)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Limitations](#limitations)
+- [License](#license)
 
 ## Features
 
@@ -12,7 +26,6 @@ An Arduino prototype that uses an ultrasonic sensor and a NeoPixel LED strip to 
 - Configurable detection range via `minDistance` and `maxDistance` constants
 - Tinkercad simulation for virtual testing
 
----
 
 ## Tech Stack
 
@@ -22,7 +35,6 @@ An Arduino prototype that uses an ultrasonic sensor and a NeoPixel LED strip to 
 - 12-pixel NeoPixel RGB LED strip
 - Passive buzzer
 
----
 
 ## How It Works
 
@@ -34,7 +46,6 @@ An Arduino prototype that uses an ultrasonic sensor and a NeoPixel LED strip to 
    - **Red** (LEDs 8–11): vehicle is near the line
 4. When all 12 LEDs are active (distance ≤ `minDistance`), the buzzer fires.
 
----
 
 ## Hardware & Wiring
 
@@ -45,18 +56,16 @@ An Arduino prototype that uses an ultrasonic sensor and a NeoPixel LED strip to 
 | NeoPixel strip — Data | Pin 3 |
 | Buzzer | Pin 2 |
 
-See `Circuit.jpg` for the full labelled circuit diagram.
+See `circuit.jpg` for the full labelled circuit diagram.
 
-![Circuit Diagram](Circuit.jpg)
+![Circuit Diagram](circuit.jpg)
 
----
 
 ## Prerequisites
 
 - [Arduino IDE](https://www.arduino.cc/en/software)
 - **Adafruit NeoPixel** library — install via Arduino IDE Library Manager (`Sketch → Include Library → Manage Libraries → search "Adafruit NeoPixel"`)
 
----
 
 ## Usage
 
@@ -70,20 +79,18 @@ See `Circuit.jpg` for the full labelled circuit diagram.
 5. Upload to an Arduino board, or open the Tinkercad simulation to test virtually:
    [https://www.tinkercad.com/things/fF0M4apSDoQ](https://www.tinkercad.com/things/fF0M4apSDoQ)
 
----
 
 ## Project Structure
 
 ```
 zebra-crossing-vehicle-alert-system/
 ├── zebra_crossing_alert.ino   # Arduino sketch
-├── Circuit.jpg                # Labelled circuit diagram
-├── Research Paper.pdf         # Detailed project documentation
+├── circuit.jpg                # Labelled circuit diagram
+├── research_paper.pdf         # Detailed project documentation
 ├── LICENSE
 └── README.md
 ```
 
----
 
 ## Limitations
 
@@ -92,8 +99,7 @@ zebra-crossing-vehicle-alert-system/
 - **Simulation-scale constants** — `minDistance` (100 mm) and `maxDistance` (300 mm) are calibrated for the Tinkercad simulation; a real-world crosswalk installation would require recalibration.
 - **Prototype only** — not tested on physical hardware or in a real traffic environment.
 
----
 
 ## License
 
-MIT © 2024 Archis Khuspe
+Released under the [MIT License](LICENSE).
