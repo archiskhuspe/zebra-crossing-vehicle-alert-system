@@ -62,15 +62,15 @@ void loop()
   {
     if(i < 4)
     {
-      strip.setPixelColor(i,strip.Color(50,0,0));//green,red,blue
+      strip.setPixelColor(i,strip.Color(50,0,0));//red,green,blue
     }
     else if(i >= 4 && i < 8)
     {
-      strip.setPixelColor(i,strip.Color(50,50,0));//green,red,blue
+      strip.setPixelColor(i,strip.Color(50,50,0));//red,green,blue
     }
     else if(i >= 8 && i < 12)
     {
-      strip.setPixelColor(i,strip.Color(0,50,0));//green,red,blue
+      strip.setPixelColor(i,strip.Color(0,50,0));//red,green,blue
     }
   }
   for(int i = ledsToGlow; i < ledNo; i++)
